@@ -1,3 +1,4 @@
 ## Docs
 
-- view[#Docs/view.md]
+- [view & materialized view](Docs/view.md)
+- [RxJS](Docs/rxjs.md)
