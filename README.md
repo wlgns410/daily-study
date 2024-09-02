@@ -12,3 +12,4 @@
 - [void, never, null, undefined](Docs/ts/type1.md)
 - [collation](Database/postgresql/collation.md)
 - [any, unknown](Docs/ts/type2.md)
+- [ls 명령어](Docs/linux/ls.md)
