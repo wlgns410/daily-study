@@ -14,3 +14,4 @@
 - [any, unknown](Docs/ts/type2.md)
 - [ls 명령어](Docs/linux/ls.md)
 - [DEFERRABLE](Docs/Database/postgresql/deferrable.md)
+- [INSTEAD OF 트리거](Docs/Database/postgresql/trigger2.md)
