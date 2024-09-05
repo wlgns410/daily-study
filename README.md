@@ -15,3 +15,4 @@
 - [ls 명령어](Docs/linux/ls.md)
 - [DEFERRABLE](Docs/Database/postgresql/deferrable.md)
 - [INSTEAD OF 트리거](Docs/Database/postgresql/trigger2.md)
+- [jest worker 수 지정](Docs/js/jest.md)
