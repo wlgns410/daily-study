@@ -16,3 +16,4 @@
 - [DEFERRABLE](Docs/Database/postgresql/deferrable.md)
 - [INSTEAD OF 트리거](Docs/Database/postgresql/trigger2.md)
 - [jest worker 수 지정](Docs/js/jest.md)
+- [jest 의도치 못한 에러 로그만 보기](Docs/js/jest-log.md)
