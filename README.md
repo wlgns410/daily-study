@@ -22,3 +22,4 @@
 - [.gitkeep과 .gitignore](Docs/git/git-keep.md)
 - [Nestjs Content-Disposition 파일 다운로드 세팅](Docs/nestjs/header.md)
 - [postgresql materialized view option](Docs/Database/postgresql/mview-option.md)
+- [postgresql Advisory Lock](Docs/Database/postgresql/advisory-lock.md)
