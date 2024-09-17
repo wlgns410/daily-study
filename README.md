@@ -27,3 +27,4 @@
 - [timestamp와 uuid](Docs/js/uuid.md)
 - [source-map-support](Docs/ts/source-map-support.md)
 - [typia](Docs/ts/typia.md)
+- [bigint와 integer](Docs/Database/bigint.md)
