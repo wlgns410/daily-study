@@ -31,3 +31,4 @@
 - [bignumberjs](Docs/js/big-number-js.md)
 - [js의 enum](Docs/js/enum.md)
 - [hstore와 jsonb](Docs/Database/postgresql/hstore-jsonb.md)
+- [Swap usage](Docs/Database/postgresql/swap-usage.md)
