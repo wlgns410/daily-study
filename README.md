@@ -30,3 +30,4 @@
 - [bigint와 integer](Docs/Database/bigint.md)
 - [bignumberjs](Docs/js/big-number-js.md)
 - [js의 enum](Docs/js/enum.md)
+- [hstore와 jsonb](Docs/Database/postgresql/hstore-jsonb.md)
