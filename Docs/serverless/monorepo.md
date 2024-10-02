@@ -70,3 +70,21 @@ Monorepo에서 여러 패키지 간의 공유 코드를 다루기 위해 TypeScr
 ```
 
 lerna나 serverless를 이용해 배포를 할 수 있는데, yml에 작성하는 것은 다음에 설명하고자 한다.
+
+```
+/my-monorepo
+├── package.json
+├── serverless.yml
+├── src
+├── layers
+│   ├── concert
+│   │   ├
+│   │   ├── package.json
+│   │   └── src
+│   └── rerservation
+│       ├
+│       ├── package.json
+│       └── src
+```
+
+위와 같은 구조로 이루어진다.
