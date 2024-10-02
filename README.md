@@ -35,3 +35,4 @@
 - [Swap usage](Docs/Database/postgresql/swap-usage.md)
 - [like와 array-like](Docs/js/array-like.md)
 - [nestjs class-validator](Docs/ts/class-validator.md)
+- [monorepo 설정1](Docs/serverless/monorepo.md)
