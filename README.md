@@ -39,3 +39,4 @@
 - [static constant](Docs/js/static-constant.md)
 - [builder pattern](Docs/pattern/builder.md)
 - [git switch](Docs/git/git-switch.md)
+- [npm pre-release](Docs/npm/pre-release.md)
