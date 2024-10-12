@@ -45,3 +45,4 @@
 - [멀티플렉싱과 디멀티플렉싱](Docs/js/demultiplexer.md)
 - [queue](Docs/js/queue.md)
 - [reactor 패턴](Docs/js/reactor.md)
+- [module pattern](Docs/js/module-pattern.md)
