@@ -48,3 +48,4 @@
 - [module pattern](Docs/js/module-pattern.md)
 - [esm](Docs/js/esm.md)
 - [js vm](Docs/js/js-vm.md)
+- [substack pattern][Docs/js/substack-pattern.md]
