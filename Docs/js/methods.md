@@ -50,6 +50,20 @@ const str = "hello world";
 console.log(str.substring(0, 5)); // "hello"
 ```
 
+### splice
+
+배열에서 요소를 추가, 제거 또는 교체하는 메서드
+
+```
+array.splice(startIndex, deleteCount, item1, item2, ..., itemN);
+
+newArray.splice(s, e - s + 1, ...reversedPart);
+```
+
+startIndex: 배열에서 변경이 시작될 인덱스
+deleteCount: 배열에서 제거할 요소의 개수
+item1, item2, ..., itemN: 배열에 추가할 새로운 요소
+
 ### replace
 
 첫 번째로 발견된 특정 문자열을 대체
@@ -100,9 +114,25 @@ console.log(str.repeat(3)); // "hellohellohello"
 
 배열의 요소를 특정 구분자로 합쳐서 문자열로 반환
 
+```
+newArray.join("");
+```
+
 ### split
 
 특정 구분자를 기준으로 문자열을 나누어 배열로 반환
+
+```
+my_string.split("");
+```
+
+### reverse()
+
+배열일 때 sort 순서를 바꿀 수 있게 해준다.
+
+```
+newArray.slice(s, e).reverse();
+```
 
 ### Stack 관련 메서드
 
