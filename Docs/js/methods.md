@@ -415,6 +415,182 @@ const decimalStr = decimal.toString();  // '123.45'
 console.log(decimalStr); // "123.45"
 ```
 
+### concat()
+
+배열이나 문자열을 병합할 때 사용
+
+```
+// 문자열
+const str1 = "Hello";
+const str2 = "World";
+console.log(str1.concat(" ", str2)); // "Hello World"
+
+// 배열
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+console.log(arr1.concat(arr2)); // [1, 2, 3, 4]
+```
+
+### Object.assign()
+
+하나 이상의 객체를 대상으로 객체 병합(얕은 복사)  
+객체의 속성 중에 중첩된 객체가 있으면 그 중첩된 객체는 복사되지 않고 참조가 복사되어 문제가 발생할 수 있음
+
+```
+const obj1 = { a: 1, b: { c: 2 } };
+const obj2 = { d: 3 };
+
+const result = Object.assign({}, obj1, obj2);
+console.log(result); // { a: 1, b: { c: 2 }, d: 3 }
+
+// 얕은 복사이므로 result.b는 obj1.b와 동일한 참조
+result.b.c = 4;
+console.log(result);  // { a: 1, b: { c: 4 }, d: 3 }
+console.log(obj1);    // { a: 1, b: { c: 4 } } (obj1의 b도 변경됨)
+```
+
+## 채우기
+
+### fill()
+
+배열 요소를 채워서 Init() 함
+
+```
+const arr = [1, 2, 3];
+console.log(arr.fill(0)); // [0, 0, 0]
+```
+
+### padStart()
+
+앞에 특정 문자열 채움
+
+```
+const str = "5";
+console.log(str.padStart(3, "0")); // "005"
+```
+
+### padEnd()
+
+끝에 특정 문자열 채움
+
+```
+const str = "5";
+console.log(str.padEnd(3, "0"));   // "500"
+```
+
+### copyWithin()
+
+일부 요소 복사해서 입력한 인덱스 범위에 넣음  
+새 배열 안만듦
+
+```
+const arr = [1, 2, 3, 4, 5];
+arr.copyWithin(0, 3); // 첫 번째부터 시작해서 3번째 요소를 복사
+console.log(arr); // [4, 5, 3, 4, 5]
+```
+
+### findIndex()
+
+조건에 맞는 첫번째 인덱스를 반환
+
+```
+const arr = [1, 2, 3, 2, 1];
+console.log(arr.findIndex(x => x === 2)); // 1 (첫 번째 2의 인덱스)
+```
+
+### findLastIndex()
+
+배열에서 제공된 함수의 조건에 해당하는 마지막 요소의 인덱스를 반환
+
+```
+const arr = [1, 2, 3, 2, 1];
+console.log(arr.findLastIndex(x => x === 2)); // 3
+```
+
+### find()
+
+배열에서 조건에 맞는 첫번째 요소를 리턴함
+
+```
+const arr = [1, 2, 3, 4, 5];
+const found = arr.find(x => x % 2 === 0);  // 짝수를 찾음
+console.log(found); // 2 (첫 번째 짝수)
+```
+
+### findLast()
+
+제공된 함수의 조건을 만족하는 마지막 요소를 반환
+
+```
+const arr = [1, 2, 3, 4, 5];
+const found = arr.findLast(x => x % 2 === 0);  // 짝수를 찾음
+console.log(found); // 4
+```
+
+## 값 타입 확인
+
+### isNaN()
+
+값이 NaN 인지 확인.  
+하지만 숫자가 아닌 모든 값들을 NaN으로 판단할 수 있다.
+
+```
+console.log(isNaN("hello")); // true -> 그냥 NaN 인지 확인
+console.log(Number.isNaN("hello")); // false -> 숫자인지 확인
+```
+
+### Array.isArray()
+
+배열인지 확인
+
+```
+console.log(Array.isArray([1, 2, 3])); // true
+console.log(Array.isArray("hello")); // false
+```
+
+## 반올림
+
+### Math.floor(), Math.ceil(), Math.round()
+
+```
+console.log(Math.floor(4.7)); // 4 (버림)
+console.log(Math.ceil(4.3));  // 5 (올림)
+console.log(Math.round(4.5)); // 5 (반올림)
+```
+
+### Object.freeze()
+
+객체를 불변 상태로 만들어서 해당 객체의 속성을 수정, 추가, 삭제할 수 없게 만듦
+
+```
+const obj = { a: 1, b: 2 };
+Object.freeze(obj);
+obj.a = 3; // 수정되지 않음
+console.log(obj.a); // 1
+```
+
+### Object.seal()
+
+객체를 기존 속성을 변경할 수 있지만, 새로운 속성을 추가하거나 삭제할 수 없는 상태로 만듦
+
+```
+const obj = { a: 1 };
+Object.seal(obj);
+obj.a = 2; // 변경 가능
+delete obj.a; // 삭제 불가
+console.log(obj); // { a: 2 }
+```
+
+### Array.from()
+
+유사 배열 객체나 이터러블 객체를 배열로 변환시킴
+
+```
+const str = "hello";
+const arr = Array.from(str);
+console.log(arr); // ['h', 'e', 'l', 'l', 'o']
+```
+
 ### Stack 관련 메서드
 
 스택은 후입선출(LIFO, Last In First Out) 구조
@@ -470,5 +646,3 @@ const result = arr.reduce((acc, val) => acc + val, 0); // 배열의 합 구하�
 메서드는 위에 정리한 것들을 이용
 
 ---
-
-추가적으로 작업 필요
