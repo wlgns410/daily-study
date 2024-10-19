@@ -134,6 +134,287 @@ my_string.split("");
 newArray.slice(s, e).reverse();
 ```
 
+### map()
+
+배열의 각 요소에 제공된 함수를 호출한 결과를 새 배열로 반환
+
+```
+const arr = [1, 2, 3, 4];
+const doubled = arr.map(x => x * 2);
+console.log(doubled); // [2, 4, 6, 8]
+```
+
+### filter()
+
+배열의 각 요소에 대해 제공된 함수의 결과가 true인 요소들로 새 배열을 리턴
+
+```
+const arr = [1, 2, 3, 4];
+const evens = arr.filter(x => x % 2 === 0);
+console.log(evens); // [2, 4]
+```
+
+### reduce
+
+배열의 모든 요소를 순회하면서, 제공된 함수에 따라 하나의 값으로 축약(누적합, 누적곱 etc...)
+
+const arr = [1, 2, 3, 4];
+const sum = arr.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 10
+
+### find
+
+배열에서 제공된 함수의 조건을 만족하는 첫 번째 요소를 반환, 찾지 못하면 undefined
+
+```
+const arr = [1, 2, 3, 4];
+const firstEven = arr.find(x => x % 2 === 0);
+console.log(firstEven); // 2
+```
+
+### findIndex()
+
+배열에서 제공된 함수의 조건을 만족하는 첫 번째 요소의 인덱스를 반환, 찾지 못하면 -1
+
+```
+const arr = [1, 2, 3, 4];
+const index = arr.findIndex(x => x === 3);
+console.log(index); // 2
+```
+
+### every()
+
+배열의 모든 요소가 제공된 함수의 조건을 만족하면 true, 그렇지 않으면 false
+
+```
+const arr = [1, 2, 3, 4];
+const allEven = arr.every(x => x % 2 === 0);
+console.log(allEven); // false 모든 요소가 나머지가 0이 아니기 때문
+```
+
+### some()
+
+배열의 일부 요소가 제공된 함수의 조건을 만족하면 true, 그렇지 않으면 false
+
+```
+const arr = [1, 3, 5];
+const hasEven = arr.some(x => x % 2 === 0);
+console.log(hasEven); // false - 1개도 없기 때문
+```
+
+### sort()
+
+배열을 정렬. 기본적으로 문자열로 정렬하므로 숫자를 정렬할 경우 함수를 제공해야 함
+
+```
+const arr = [3, 1, 4, 1, 5];
+arr.sort((a, b) => a - b);
+console.log(arr); // [1, 1, 3, 4, 5]
+```
+
+### flat()
+
+중첩된 배열을 1차 배열로 만들어 새로운 배열로 반환
+
+```
+const arr = [1, [2, 3], [4, [5, 6]]];
+console.log(arr.flat());
+// 출력: [1, 2, 3, 4, [5, 6]] (한 단계만 평탄화)
+
+const arr = [1, [2, [3, [4, [5]]]]];
+console.log(arr.flat(2));  // 내가 값을 넣으면 됨
+// 출력: [1, 2, 3, [4, [5]]] (2단계 평탄화)
+```
+
+```
+const arr = [1, [2, [3, [4, [5]]]]];
+console.log(arr.flat(Infinity));
+// 출력: [1, 2, 3, 4, 5] (모든 중첩 배열 평탄화시킴)
+```
+
+### flatMap()
+
+배열을 먼저 매핑하고 그 결과를 평탄화
+
+```
+const arr = [1, 2, 3];
+console.log(arr.flatMap(x => [x * 2])); // [2, 4, 6]
+```
+
+### Object.keys()
+
+객체의 모든 key를 가지고 배열로 반환
+
+```
+const obj = { a: 1, b: 2, c: 3 };
+console.log(Object.keys(obj)); // ['a', 'b', 'c']
+```
+
+### Object.values()
+
+객체의 모든 value를 배열로 반환
+
+```
+const obj = { a: 1, b: 2, c: 3 };
+console.log(Object.values(obj)); // [1, 2, 3]
+```
+
+### Object.entries()
+
+객체의 [키, 값] 쌍을 배열로 반환
+
+```
+const obj = { a: 1, b: 2, c: 3 };
+console.log(Object.entries(obj)); // [['a', 1], ['b', 2], ['c', 3]]
+```
+
+### setTimeout() / setInterval()
+
+특정 시간 후에 코드 실행 / 일정 시간 간격으로 코드 실행
+
+```
+setTimeout(() => console.log("1초 후 실행"), 1000);
+
+const intervalId = setInterval(() => console.log("1초마다 실행"), 1000);
+clearInterval(intervalId); // 멈추기
+```
+
+### JSON.stringify()
+
+자바스크립트 객체를 JSON 문자열로 변환  
+직렬화(serialization)라고 함  
+js 객체를 json 문자열로 바꿔 클라이언트가 읽을 수 있는 형태로 만드는 것
+
+```
+const obj = { a: 1, b: 2 };
+console.log(JSON.stringify(obj)); // '{"a":1,"b":2}'
+```
+
+### JSON.parse()
+
+JSON 문자열을 자바스크립트 객체로 변환  
+반직렬화(deserialization)이라고 함
+클라이언트에게 받은 json 문자열을 서버단이 읽을 수 있는 js 객체로 바꾸는 것을 말함
+
+```
+const jsonStr = '{"a":1,"b":2}';
+console.log(JSON.parse(jsonStr)); // { a: 1, b: 2 }
+```
+
+## 변환
+
+### array -> set
+
+Set은 중복 요소를 허용하지 않는 데이터 구조
+
+```
+const arr = [1, 2, 3, 3, 4];
+const set = new Set(arr); // 중복을 제거한 Set 객체 생성
+console.log(set); // Set { 1, 2, 3, 4 }
+```
+
+### set -> array
+
+중복 요소를 허용하는 구조
+
+```
+const set = new Set([1, 2, 3, 3, 4]);
+const arr = [...set]; // 스프레드 연산자를 사용해 배열로 변환
+console.log(arr); // [1, 2, 3, 4]
+```
+
+```
+const arr = Array.from(set);
+console.log(arr); // [1, 2, 3, 4]
+```
+
+### object, dict -> array
+
+```
+const obj = { a: 1, b: 2, c: 3 };
+const keys = Object.keys(obj);    // ['a', 'b', 'c']
+const values = Object.values(obj); // [1, 2, 3]
+const entries = Object.entries(obj); // [['a', 1], ['b', 2], ['c', 3]]
+```
+
+### array, set -> object
+
+배열을 객체로 변환할 때, 배열의 요소를 키-값 쌍으로 변환해야함  
+배열의 각 요소가 [key, value]의 형태일 경우 Object.fromEntries()를 사용하여 객체로 변환할 수 있음  
+\*Set ↔ Object: 직접 변환은 불가하며, 배열로 변환 후 처리
+
+```
+const arr = [['a', 1], ['b', 2], ['c', 3]];
+const obj = Object.fromEntries(arr);
+console.log(obj); // { a: 1, b: 2, c: 3 }
+
+const set = new Set([['a', 1], ['b', 2]]);
+const obj = Object.fromEntries(set);
+console.log(obj); // { a: 1, b: 2 }
+```
+
+### object -> set
+
+```
+const obj = { a: 1, b: 2, c: 3 };
+const set = new Set(Object.entries(obj));
+console.log(set); // Set { ['a', 1], ['b', 2], ['c', 3] }
+```
+
+### 배열 안 요소 타입 변환
+
+map() 메서드를 사용하여 각 요소에 parseInt() 또는 Number()를 적용
+
+```
+const arr = ["1", "2", "3", "4"];
+const intArr = arr.map(Number);  // 각 요소를 숫자로 변환
+console.log(intArr); // [1, 2, 3, 4]
+
+const intArr2 = arr.map(val => parseInt(val, 10));  // 10진수로 변환
+console.log(intArr2); // [1, 2, 3, 4]
+```
+
+### string -> array
+
+```
+const str = "hello";
+const arr = str.split('');
+console.log(arr); // ['h', 'e', 'l', 'l', 'o']
+```
+
+### array -> string
+
+```
+const arr = ['h', 'e', 'l', 'l', 'o'];
+const str = arr.join('');
+console.log(str); // 'hello'
+```
+
+### string -> int
+
+```
+const str = "123";
+const num = Number(str);      // 123 (정수)
+const int = parseInt(str, 10);  // 123 (정수)
+const decimal = parseFloat("123.45");  // 123.45 (실수)
+```
+
+### int -> string
+
+String() 함수 또는 toString() 메서드를 사용하여 숫자를 문자열로 변환  
+decimal은 integer(number type) 혹은 string으로 관리할 수 있음  
+string으로 관리하는 경우 수 계산을 위함이며 bignumberjs로 계산을 처리한다
+
+```
+const num = 123;
+const str = String(num);  // '123'
+console.log(str); // "123"
+
+const decimal = 123.45;
+const decimalStr = decimal.toString();  // '123.45'
+console.log(decimalStr); // "123.45"
+```
+
 ### Stack 관련 메서드
 
 스택은 후입선출(LIFO, Last In First Out) 구조
