@@ -1,5 +1,85 @@
 # js 메서드들
 
+## Math
+
+### Math.max
+
+```
+console.log(Math.max(1, 2, 3, 4)); // 4
+
+// 배열을 사용할 경우 스프레드 연산자를 사용
+const arr = [1, 2, 3, 4];
+console.log(Math.max(...arr)); // 4
+```
+
+### Math.min
+
+```
+console.log(Math.min(1, 2, 3, 4)); // 1
+
+// 배열을 사용할 경우 스프레드 연산자를 사용
+const arr = [1, 2, 3, 4];
+console.log(Math.min(...arr)); // 1
+```
+
+### Math.abs
+
+```
+console.log(Math.abs(-5)); // 5
+console.log(Math.abs(3));  // 3
+```
+
+### Math.pow
+
+```
+console.log(Math.pow(2, 3)); // 8 (2^3)
+console.log(Math.pow(5, 2)); // 25 (5^2)
+```
+
+### Math.sqrt
+
+```
+console.log(Math.sqrt(16)); // 4
+console.log(Math.sqrt(25)); // 5
+```
+
+### Math.round, floor, ceil, trunc
+
+```
+console.log(Math.round(4.7)); // 5
+console.log(Math.round(4.4)); // 4
+
+console.log(Math.floor(4.7)); // 4
+console.log(Math.floor(4.4)); // 4
+
+console.log(Math.ceil(4.1)); // 5
+console.log(Math.ceil(4.9)); // 5
+
+console.log(Math.trunc(4.9)); // 4
+console.log(Math.trunc(-4.9)); // -4
+```
+
+### Math.random
+
+0 이상 1 미만의 난수를 반환
+
+```
+console.log(Math.random());  // 예: 0.56789
+
+const randomNum = Math.floor(Math.random() * 10) + 1; // 1부터 10 사이의 난수
+console.log(randomNum);
+```
+
+### sum
+
+Math에는 sum 함수가 없으므로 reduce를 사용하여 배열의 요소를 더해 구함
+
+```
+const arr = [1, 2, 3, 4, 5];
+const sum = arr.reduce((acc, curr) => acc + curr, 0); // 0은 초기값
+console.log(sum); // 15
+```
+
 ### startsWith
 
 문자열이 특정 문자열로 시작하는지 확인
@@ -168,15 +248,13 @@ map()은 배열을 변환하는 데 사용되지만, 모든 요소에 대해 무
 const arr = [1, 2, 3, 4];
 const evens = arr.filter(x => x % 2 === 0);
 console.log(evens); // [2, 4]
-```
 
-````
 const newArray = num_list.filter((elem, idx) => {
         if(idx % n === 0 ){
             return elem
         }
-    })
-``` // map과 달리 필터링된 요소만 새 배열에 담김
+    }) // map과 달리 필터링된 요소만 새 배열에 담김
+```
 
 filter() 메서드도 map()과 마찬가지로 세 가지 매개변수를 받을 수 있음
 
@@ -188,20 +266,20 @@ filter() 메서드도 map()과 마찬가지로 세 가지 매개변수를 받을
 
 배열의 모든 요소를 순회하면서, 제공된 함수에 따라 하나의 값으로 축약(누적합, 누적곱 etc...)
 
+```
 const arr = [1, 2, 3, 4];
 const sum = arr.reduce((acc, curr) => acc + curr, 0);
 console.log(sum); // 10
+```
 
 ### find
 
 배열에서 제공된 함수의 조건을 만족하는 첫 번째 요소를 반환, 찾지 못하면 undefined
 
-````
-
+```
 const arr = [1, 2, 3, 4];
 const firstEven = arr.find(x => x % 2 === 0);
 console.log(firstEven); // 2
-
 ```
 
 ### findIndex()
@@ -209,11 +287,9 @@ console.log(firstEven); // 2
 배열에서 제공된 함수의 조건을 만족하는 첫 번째 요소의 인덱스를 반환, 찾지 못하면 -1
 
 ```
-
 const arr = [1, 2, 3, 4];
 const index = arr.findIndex(x => x === 3);
 console.log(index); // 2
-
 ```
 
 ### every()
@@ -764,4 +840,7 @@ const result = arr.reduce((acc, val) => acc + val, 0); // 배열의 합 구하�
 메서드는 위에 정리한 것들을 이용
 
 ---
+
+```
+
 ```
