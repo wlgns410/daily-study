@@ -51,3 +51,4 @@
 - [substack pattern](Docs/js/substack-pattern.md)
 - [cps](Docs/js/cps.md)
 - [js 제공 메서드](Docs/js/methods.md)
+- [varchar와 text](Docs/Database/postgresql/varchar-text.md)
