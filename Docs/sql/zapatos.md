@@ -66,3 +66,11 @@ export class PostService {
 getPostsByUserNamePrefix 함수가 DatabaseService에서 가져온 커넥션 풀을 사용하여 Zapatos 쿼리를 실행하도록 설정되었다.  
 TypeORM과 Zapatos가 동일한 커넥션 풀을 공유하게 된다.  
 getPool 메서드를 통해 Zapatos가 TypeORM의 커넥션 풀을 재사용하므로, 따로 Zapatos 전용 커넥션 풀이 생기지 않게 되는 것을 볼 수 있다.
+
+---
+
+다만, typeorm은 querybuilder도 있어서 zapatos를 잘 안쓰는 편인것 같고 sequlize랑 보통 같이 쓰는 모양인 듯 하다.
+
+참고
+
+https://jawj.github.io/zapatos/
