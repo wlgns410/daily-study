@@ -54,3 +54,5 @@
 - [varchar와 text](Docs/Database/postgresql/varchar-text.md)
 - [파티셔닝](Docs/Database/postgresql/partitioning.md)
 - [port](Docs/Database/postgresql/port.md)
+- [zapatos](Docs/sql/zapatos.md)
+- 
