@@ -56,3 +56,4 @@
 - [port](Docs/Database/postgresql/port.md)
 - [zapatos](Docs/sql/zapatos.md)
 - [LC_COLLATE C](Docs/Database/postgresql/collation-c.md)
+- [cherry pick](Docs/git/cherry-pick.md)
