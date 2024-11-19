@@ -71,3 +71,4 @@
 - [Date 객체와 dayjs format](Docs/js/date.md)
 - [기본값 반환하면 안될 때](Docs/js/return-default-value.md)
 - [코드 실행 시간 분석](Docs/js/profiling.md)
+- [TRUNCATE와 DELETE](Docs/Database/sql/truncate.md)
