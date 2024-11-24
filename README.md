@@ -72,3 +72,4 @@
 - [기본값 반환하면 안될 때](Docs/js/return-default-value.md)
 - [코드 실행 시간 분석](Docs/js/profiling.md)
 - [TRUNCATE와 DELETE](Docs/Database/sql/truncate.md)
+- [view table](Docs/Database/postgresql/view-table.md)
