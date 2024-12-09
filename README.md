@@ -77,3 +77,5 @@
 - [stream 처리](Docs/js/stream.md)
 - [psql과 uuid v4, v7](Docs/js/uuid-v7.md)
 - [psql과 connection pool](Docs/Database/postgresql/connection-pool.md)
+- [aws ec2 서버 메모리 누수](Docs/aws/ec2-memory-leak.md)
+  
