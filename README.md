@@ -81,3 +81,4 @@
 - [select 1, select 1+1 쿼리](Docs/Database/sql/select-one.md)
 - [row lock과 table lock](Docs/Database/sql/row-table-lock.md)
 - [github action 최적화](Docs/DevOps/github-action.md)
+- [yarn zero install](Docs/DevOps/yarn-zero-install.md)
