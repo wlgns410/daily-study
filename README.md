@@ -82,3 +82,4 @@
 - [row lock과 table lock](Docs/Database/sql/row-table-lock.md)
 - [github action 최적화](Docs/DevOps/github-action.md)
 - [yarn zero install](Docs/DevOps/yarn-zero-install.md)
+- [github incremental deployment](Docs/DevOps/incremental-deployment.md)
