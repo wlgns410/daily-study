@@ -85,3 +85,4 @@
 - [github incremental deployment](Docs/DevOps/incremental-deployment.md)
 - [pm2 watch mode](Docs/DevOps/pm2-watch.md)
 - [Package cache](Docs/DevOps/package-cache.md)
+- [checkout action](Docs/DevOps/checkout.md)
