@@ -86,3 +86,4 @@
 - [pm2 watch mode](Docs/DevOps/pm2-watch.md)
 - [Package cache](Docs/DevOps/package-cache.md)
 - [checkout action](Docs/DevOps/checkout.md)
+- [vercel](Docs/DevOps/vercel.md)
